@@ -1,0 +1,29 @@
+<div class="row">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="">First No.</label>
+      <input type="number" name="fn" [(ngModel)]="fn">
+    </div>
+    <div class="form-group">
+      <label for="">Second No.</label>
+      <input type="number" name="ln" [(ngModel)]="ln">
+    </div>
+    <div class="form-group">
+      <input type="radio" name="action" value="add" [(ngModel)]="action">
+      <label for="">Add: </label>
+      <input type="radio" name="action" value="sub" [(ngModel)]="action">
+      <label for="">Substract: </label>
+      <input type="radio" name="action" value="mul" [(ngModel)]="action">
+      <label for="">Multiply: </label>
+      <input type="radio" name="action" value="divi" [(ngModel)]="action">
+      <label for="">Divide: </label>
+    </div>
+    <div class="form-group">
+      <input type="submit" (click)="addTwoNumber()" value="Add" class="btn btn-primary">
+    </div>
+  </form>
+</div>
+<br>
+<div class="row" [hidden]="flag">
+  Result : {{result}}
+</div>
